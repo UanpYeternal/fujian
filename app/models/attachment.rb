@@ -1,6 +1,8 @@
 class Attachment < ActiveRecord::Base
 	mount_uploader :attachment, AttachmentUploader
 
+	validates :attachment, :uniqueness => true
+
 	belongs_to :attachmentable, :polymorphic => true
 
 	validates :attachmentable, :presence => true
