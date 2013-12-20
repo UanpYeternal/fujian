@@ -7,4 +7,10 @@ class AttachmentsController < ApplicationController
 	def show
 		Attachment.all
 	end
+
+	def upload
+		u = AttachmentUploader.new
+		u.store!(@attachment)
+
+	end
 end

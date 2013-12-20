@@ -1,4 +1,5 @@
 class Attachment < ActiveRecord::Base
+	mount_uploader :AttachmentUploader
 
 	validates :attachment, :uniqueness => true
 

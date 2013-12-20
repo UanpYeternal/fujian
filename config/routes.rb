@@ -5,6 +5,7 @@ Fujian::Application.routes.draw do
   # You can have the root of your site routed with "root"
    get 'attachments' => 'attachments#show'
    get 'attachments/create' => 'attachments#create'
+   post 'attachments' => 'attachments#upload'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
